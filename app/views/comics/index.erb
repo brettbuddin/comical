@@ -1,0 +1,5 @@
+<% @comics.each do |comic| %>
+<div class="comic">
+  <%= link_to show_comic_path(comic), comic.name %>
+</div>
+<% end %>
