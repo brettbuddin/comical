@@ -1,0 +1,11 @@
+.DS_Store
+*.swp
+log/*
+tmp/**/*
+doc/api
+doc/app
+config/config.yml
+config/ultrasphinx/*.conf
+config/*.sphinx.conf
+db/sphinx/*
+public/system/*
