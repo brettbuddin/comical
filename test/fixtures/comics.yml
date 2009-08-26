@@ -19,3 +19,8 @@ penny_arcade:
   name: Penny Arcade
   feed_url: http://feeds.penny-arcade.com/pa-mainsite/
   fetch_frequency: 127
+  
+hark_vagrant:
+  name: Hark, A Vagrant
+  feed_url: http://www.rsspect.com/rss/vagrant.xml
+  fetch_frequency: 127

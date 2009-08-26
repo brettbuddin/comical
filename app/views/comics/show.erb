@@ -5,9 +5,12 @@
   <% @comic.strips.each do |strip| %>
   <article class="strip <%= name_slug(strip.comic) %>">
     <img src="<%= strip.image_url %>" alt="<%= strip.description %>" />
-    
-    
+    <h3><%= strip.description %></h3>
     <span class="posted">posted <%= relative_date(strip.posted_on) %></span>
   </article>
+  <% end %>
+  
+  <% if @comic.strips.empty? %>
+  <p>No strips have been pulled in for this comic yet.</p>
   <% end %>
 </div>
