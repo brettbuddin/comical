@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090821180926) do
+ActiveRecord::Schema.define(:version => 20090826184348) do
 
   create_table "comics", :force => true do |t|
     t.string   "feed_url"
@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(:version => 20090821180926) do
     t.integer  "fetch_frequency"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "url_name"
+    t.string   "site_url"
   end
 
   create_table "strips", :force => true do |t|

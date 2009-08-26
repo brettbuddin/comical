@@ -2,25 +2,35 @@
 
 xkcd:
   name: xkcd
+  url_name: xkcd
   feed_url: http://www.xkcd.com/rss.xml
+  site_url: http://xkcd.com/
   fetch_frequency: 127
 
 dinosaur_comics:
   name: Dinosaur Comics
+  url_name: dinosaur-comics
   feed_url: http://www.rsspect.com/rss/qwantz.xml
+  site_url: http://www.qwantz.com/
   fetch_frequency: 127
   
 wondermark:
   name: Wondermark
+  url_name: wondermark
   feed_url: http://feeds.feedburner.com/wondermark
+  site_url: http://wondermark.com/
   fetch_frequency: 127
   
 penny_arcade:
   name: Penny Arcade
+  url_name: penny-arcade
   feed_url: http://feeds.penny-arcade.com/pa-mainsite/
+  site_url: http://www.penny-arcade.com/
   fetch_frequency: 127
   
 hark_vagrant:
   name: Hark, A Vagrant
+  url_name: hark-a-vagrant
   feed_url: http://www.rsspect.com/rss/vagrant.xml
+  site_url: http://www.harkavagrant.com/
   fetch_frequency: 127
