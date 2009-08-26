@@ -36,4 +36,4 @@ role :db, 'intraspirit.net'
 
 set :user, 'brett'
 
-set :deploy_to, '/home/brett/apps/comical'
+set :deploy_to, '/home/brett/web/comical.intraspirit.net/public'
