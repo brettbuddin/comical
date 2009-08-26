@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title><%= (title = yield(:title)) ? "#{title} &mdash; " : '' %>Comical</title>
+	<title><%= (title = yield(:title)) ? "#{title} &mdash; " : '' %>The Comical</title>
 	<%= stylesheet_link_tag 'reset.css', :cache => true %>
 	<%= stylesheet_link_tag 'main.css', :cache => true %>
 </head>
@@ -12,7 +12,8 @@
 
 <header>
   <div class="container">
-    <h1><%= link_to 'Comical', root_path %></h1>
+    <h1><%= link_to 'The Comical', root_path %></h1>
+    <span class="tagline">Your daily comic strip fix. <strong>Fast.</strong></span>
   </div>
 </header>
 
