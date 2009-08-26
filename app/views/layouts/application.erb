@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title><%= (title = yield(:title)) ? "#{title} &mdash; " : '' %>Comical</title>
+	<%= stylesheet_link_tag 'reset.css', :cache => true %>
+	<%= stylesheet_link_tag 'main.css', :cache => true %>
+</head>
+
+<body id="<%= page_id %>">
+
+<header>
+  <div class="container">
+    <h1><%= link_to 'Comical', root_path %></h1>
+  </div>
+</header>
+
+<div id="content">
+  <%= yield %>
+</div>
+
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2009 Brett Buddin. All comics and copy are copyright of their respective authors.</span>
+  </div>
+</footer>
+
+</body>
+</html>

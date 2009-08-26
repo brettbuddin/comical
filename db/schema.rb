@@ -20,9 +20,8 @@ ActiveRecord::Schema.define(:version => 20090821180926) do
   end
 
   create_table "strips", :force => true do |t|
-    t.string   "name"
+    t.string   "description"
     t.date     "posted_on"
-    t.string   "image_digest"
     t.string   "image_url"
     t.integer  "comic_id"
     t.datetime "created_at"

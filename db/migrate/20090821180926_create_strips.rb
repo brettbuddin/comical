@@ -1,9 +1,8 @@
 class CreateStrips < ActiveRecord::Migration
   def self.up
     create_table :strips do |t|
-      t.string :name
+      t.string :description
       t.date :posted_on
-      t.string :image_digest
       t.string :image_url
       t.references :comic
       t.timestamps

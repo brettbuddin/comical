@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
+  map.root :controller => 'comics'
   map.resources :comics do |c|
     c.resources :strips
   end

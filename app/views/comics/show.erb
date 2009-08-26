@@ -1,0 +1,11 @@
+<% title "The latest from #{@comic.name}" %>
+
+<div class="container">
+  <h2><%= @comic.name %></h2>
+  <% @comic.strips.each do |strip| %>
+  <article class="strip <%= name_slug(strip.comic) %>">
+    <img src="<%= strip.image_url %>" alt="<%= strip.description %>" />
+    <p>Posted <time><%= "#{time_ago_in_words(strip.posted_on)} ago" %></time></p>
+  </article>
+  <% end %>
+</div>
