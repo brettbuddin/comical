@@ -13,7 +13,7 @@ p { font-size: 120%; }
 header { margin: 2em 0 1em; }
 header .tagline { font: 140% Georgia, 'Times New Roman', serif; color: #999; font-style: italic; }
 
-#content { margin-bottom: 10em; }
+#content { margin-bottom: 8em; }
 .container { width: 500px; margin: 0 auto; }
 
 .comic { padding: 0.5em 1em 0.5em 0; clear: both; }
@@ -26,7 +26,7 @@ header .tagline { font: 140% Georgia, 'Times New Roman', serif; color: #999; fon
 .meta { font: 140% Georgia, 'Times New Roman', serif; font-style: italic; }
 .wondermark img { margin-left: -22%; }
 
-footer { color: #999; font-size: 120%; }
+footer { border-top: 1px solid #eee; padding-top: 1em; margin-bottom: 2em; color: #999; font-size: 120%; }
 footer .application,
 footer .comics { display: block; }
 
