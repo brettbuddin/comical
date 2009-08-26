@@ -4,10 +4,10 @@ body { font: 62.5%/1.8 Helvetica, Arial, sans-serif; color: #333; }
 
 a { color: #cf4240; text-decoration: none; }
 
-h1,h2,h3 { font-weight: bold; }
-h1 { font-size: 400%; }
+h1,h2,h3 { font-weight: bold; letter-spacing: -0.05em; }
+h1 { font-size: 600%; }
 h2 { font-size: 200%; }
-h3 { font-size: 160%; }
+h3 { font-size: 160%; letter-spacing: -0.1em; }
 
 p { font-size: 120%; }
 
@@ -21,6 +21,7 @@ p { font-size: 120%; }
 
 
 #comics-show h2 { margin-bottom: 1em; }
+.strip { margin-bottom: 1em; }
 .strip img { margin-left: -25%; }
 .strip .posted { font: 140% Georgia, 'Times New Roman', serif; font-style: italic; }
 .wondermark img { margin-left: -22%; }
