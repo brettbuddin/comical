@@ -4,8 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title><%= (title = yield(:title)) ? "#{title} &mdash; " : '' %>The Comical</title>
-	<%= stylesheet_link_tag 'reset.css', :cache => true %>
-	<%= stylesheet_link_tag 'main.css', :cache => true %>
+	<%= stylesheet_link_tag 'reset.css' %>
+	<%= stylesheet_link_tag 'main.css' %>
 </head>
 
 <body id="<%= page_id %>">
