@@ -2,17 +2,17 @@
 
 <div class="container">
   <h2><%= @comic.name %></h2>
-  <% @comic.strips.each do |strip| %>
-  <article class="strip <%= name_slug(strip.comic) %>">
-    <img src="<%= strip.image_url %>" alt="<%= strip.description %>" />
-    <h3><%= strip.description %></h3>
+
+  <% if @strip.nil? %>
+  <p>No strips have been pulled in for this comic yet.</p>
+  <% else %>
+  <article class="strip <%= name_slug(@strip.comic) %>">
+    <img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" />
+    <h3><%= @strip.description %></h3>
     <div class="meta">
-      <span class="posted">posted <%= relative_date(strip.posted_on) %></span> <span class="site">on <%= link_to strip.comic.name, strip.comic.site_url %></span>
+      <span class="posted">posted <%= relative_date(@strip.posted_on) %></span> <span class="site">on <%= link_to @strip.comic.name, @strip.comic.site_url %></span>
     </div>
   </article>
   <% end %>
   
-  <% if @comic.strips.empty? %>
-  <p>No strips have been pulled in for this comic yet.</p>
-  <% end %>
 </div>

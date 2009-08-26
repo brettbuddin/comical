@@ -6,5 +6,6 @@ class ComicsController < ApplicationController
   
   def show
     @comic = Comic.find_by_url_name(params[:id])
+    @strip = @comic.strips.find(:last)
   end
 end
