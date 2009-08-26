@@ -6,7 +6,9 @@
   <article class="strip <%= name_slug(strip.comic) %>">
     <img src="<%= strip.image_url %>" alt="<%= strip.description %>" />
     <h3><%= strip.description %></h3>
-    <span class="posted">posted <%= relative_date(strip.posted_on) %></span>
+    <div class="meta">
+      <span class="posted">posted <%= relative_date(strip.posted_on) %></span> <span class="site">on <%= link_to strip.comic.name, strip.comic.site_url %></span>
+    </div>
   </article>
   <% end %>
   
