@@ -5,7 +5,9 @@
   <% @comic.strips.each do |strip| %>
   <article class="strip <%= name_slug(strip.comic) %>">
     <img src="<%= strip.image_url %>" alt="<%= strip.description %>" />
-    <p>Posted <time><%= "#{time_ago_in_words(strip.posted_on)} ago" %></time></p>
+    
+    
+    <span class="posted">posted <%= relative_date(strip.posted_on) %></span>
   </article>
   <% end %>
 </div>

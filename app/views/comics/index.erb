@@ -3,7 +3,7 @@
   <% @comics.each do |comic| %>
   <article class="comic">
     <h3><%= link_to comic.name, comic_path(comic) %></h3>
-    <time><%= "#{time_ago_in_words(comic.strips.find(:last).posted_on)} ago" %></time>
+    <%= relative_date(comic.strips.find(:last).posted_on) %>
   </article>
   <% end %>
 </div>

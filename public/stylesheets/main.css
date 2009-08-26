@@ -1,6 +1,6 @@
 header, footer, article { display: block; }
 
-body { font: 62.5%/1.8 Helvetica, Arial, sans-serif; }
+body { font: 62.5%/1.8 Helvetica, Arial, sans-serif; color: #333; }
 
 a { color: #cf4240; text-decoration: none; }
 
@@ -16,10 +16,16 @@ p { font-size: 120%; }
 
 .comic { padding: 1em 1em 1em 0; clear: both; }
 .comic h3 { float: left; }
-.comic time { margin: 0.45em 0 0 1em; float: left; font: 140% Georgia, 'Times New Roman', serif; color: #666; font-style: italic; }
+.comic time { margin: 0.45em 0 0 1em; float: left; font: 140% Georgia, 'Times New Roman', serif; color: #999; font-style: italic; }
+.comic time.today { color: #333; }
+
 
 #comics-show h2 { margin-bottom: 1em; }
 .strip img { margin: 0 0 1em -25%; }
+.strip .posted { font: 140% Georgia, 'Times New Roman', serif; font-style: italic; }
+.wondermark img { margin-left: -22%; }
 
-footer { color: #999; font-size: 120%; }
+footer { position: fixed; bottom: 0.7em; left: 1em; z-index: -1; color: #999; font-size: 120%; }
+footer .application,
+footer .comics { display: block; }
 
