@@ -1,5 +1,3 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
 xkcd:
   name: xkcd
   url_name: xkcd
@@ -33,4 +31,11 @@ hark_vagrant:
   url_name: hark-a-vagrant
   feed_url: http://www.rsspect.com/rss/vagrant.xml
   site_url: http://www.harkavagrant.com/
+  fetch_frequency: 127
+
+nedroid:
+  name: Nedroid Picture Diary
+  url_name: nedroid-picture-diary
+  feed_url: http://nedroid.com/feed/
+  site_url: http://nedroid.com/
   fetch_frequency: 127
