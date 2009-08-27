@@ -21,11 +21,11 @@ header .tagline { font: 140% Georgia, 'Times New Roman', serif; color: #999; fon
 .comic time { margin: 0.4em 0 0 1em; float: left; font: 140% Georgia, 'Times New Roman', serif; color: #999; font-style: italic; }
 .comic time.today { color: #333; }
 
-.strip { margin-bottom: 2em; }
-.strip img { margin: 0 0 1em -25%; }
-.meta { font: 140% Georgia, 'Times New Roman', serif; font-style: italic; }
-.hark-a-vagrant img { margin-left: -28%; }
-.wondermark img { margin-left: -22%; }
+#comics-show h2, 
+#comics-show h3,
+#comics-show .meta { width: 500px; margin-left: auto; margin-right: auto; }
+#comics-show .image { text-align: center; margin-bottom: 1em; }
+#comics-show .meta { font: 140% Georgia, 'Times New Roman', serif; font-style: italic; }
 
 footer { border-top: 1px solid #eee; padding-top: 1em; margin-bottom: 2em; color: #999; font-size: 120%; }
 footer .application,

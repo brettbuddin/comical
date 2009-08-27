@@ -1,18 +1,14 @@
 <% title "The latest from #{@comic.name}" %>
 
-<div class="container">
-  <h2><%= @comic.name %></h2>
-
-  <% if @strip.nil? %>
-  <p>No strips have been pulled in for this comic yet.</p>
-  <% else %>
-  <article class="strip <%= name_slug(@strip.comic) %>">
-    <img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" />
-    <h3><%= @strip.description %></h3>
-    <div class="meta">
-      <span class="posted">posted <%= relative_date(@strip.posted_on) %></span> <span class="site">on <%= link_to @strip.comic.name, @strip.comic.site_url %></span>
-    </div>
-  </article>
-  <% end %>
-  
-</div>
+<h2><%= @comic.name %></h2>
+<% if @strip.nil? %>
+<p>No strips have been pulled in for this comic yet.</p>
+<% else %>
+<article class="strip <%= name_slug(@strip.comic) %>">
+  <div class="image"><img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" /></div>
+  <h3><%= @strip.description %></h3>
+  <div class="meta">
+    <span class="posted">posted <%= relative_date(@strip.posted_on) %></span> <span class="site">on <%= link_to @strip.comic.name, @strip.comic.site_url %></span>
+  </div>
+</article>
+<% end %>
