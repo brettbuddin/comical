@@ -2,7 +2,7 @@
 
 <h2><%= @comic.name %></h2>
 <% if @strip.nil? %>
-<p>No strips have been pulled in for this comic yet.</p>
+<p class="container">No strips have been pulled in for this comic yet.</p>
 <% else %>
 <article class="strip <%= name_slug(@strip.comic) %>">
   <div class="image"><img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" /></div>
