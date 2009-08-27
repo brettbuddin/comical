@@ -3,7 +3,11 @@
   <% @comics.each do |comic| %>
   <article class="comic">
     <h3><%= link_to comic.name, comic_path(comic) %></h3>
-    <%= relative_date(comic.strips.find(:last).posted_on) if comic.strips.find(:last) %>
+    <% if comic.strips.find(:last) %>
+      <%= relative_date(comic.strips.find(:last).posted_on) %>
+    <% else %>
+      <span class="not-fetched">never been fetched</span>
+    <% end %>
   </article>
   <% end %>
 </div>
