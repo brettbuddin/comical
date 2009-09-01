@@ -12,8 +12,13 @@ module ComicFeed
         data[:description] = latest.title.match(/Comic: (.*)/)[1]
         data[:posted_on] = Date.parse(latest.pubDate.to_s)
         
-        url_parts = latest.guid.to_s.match(/http:\/\/www\.penny-arcade\.com\/comic\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([^\/]*)/)
-        data[:image_url] = "http://penny-arcade.com/images/#{url_parts[1]}/#{url_parts[1]}#{add_leading_zero(url_parts[2])}#{add_leading_zero(url_parts[3])}.jpg"
+        url_parts = latest.guid.to_s.match(/comic\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([^\/]*)/)
+        
+        content = ''
+        open("http://www.penny-arcade.com/#{url_parts[0]}") { |s| content = s.read }
+        
+        img_url = content.match(/<img src="(http:\/\/art\.penny-arcade\.com\/photos\/.+\.jpg)" alt="#{data[:description]}"( )+\/>/)
+        data[:image_url] = img_url[1]
         return data
       end
       
