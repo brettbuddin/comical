@@ -48,4 +48,11 @@ namespace :deploy do
     desc "#{t} task is a no-op with mod_rails"
     task t, :roles => :app do ; end
   end
+  
+  namespace :feeds do
+    desc "Update the feeds"
+    task :update, :roles => :app do
+      run "cd #{current_path} && rake feeds:update RAILS_ENV=production"
+    end
+  end
 end
