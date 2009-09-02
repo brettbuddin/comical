@@ -6,6 +6,10 @@ class ComicsController < ApplicationController
   
   def show
     @comic = Comic.find_by_url_name(params[:id])
-    @strip = @comic.strips.find(:last)
+    if @comic
+      @strip = @comic.strips.find(:last)
+    else
+      raise ActiveRecord::RecordNotFound
+    end
   end
 end
