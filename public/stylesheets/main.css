@@ -18,8 +18,8 @@ header .tagline { font: 140% Georgia, 'Times New Roman', serif; color: #999; fon
 
 .comic { clear: both; }
 .comic h3 { float: left; margin-bottom: 0.7em; }
-.comic time, .comic .not-fetched { margin: 0.4em 0 0 1em; float: left; font: 140% Georgia, 'Times New Roman', serif; color: #999; font-style: italic; }
-.comic time.today { color: #333; }
+.comic .time, .comic .not-fetched { margin: 0.4em 0 0 1em; float: left; font: 140% Georgia, 'Times New Roman', serif; color: #999; font-style: italic; }
+.comic .today { color: #333; }
 
 #comics-show h2, 
 #comics-show h3,

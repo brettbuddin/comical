@@ -5,11 +5,11 @@ module ComicsHelper
   
   def relative_date(posted_on)
     if Date.today == posted_on
-      "<time class=\"today\">today</time>"
+      "<span class=\"time today\">today</span>"
     elsif Date.today - 1 == posted_on
-      "<time>yesterday</time>"
+      "<span class=\"time\">yesterday</span>"
     else
-      "<time>#{time_ago_in_words(posted_on)} ago</time>"
+      "<span class=\"time\">#{time_ago_in_words(posted_on)} ago</span>"
     end
   end
 end
