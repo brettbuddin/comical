@@ -11,10 +11,15 @@
 
 <body id="<%= page_id %>">
 
-<header>
+<header class="clearfixed">
   <div class="container">
-    <h1><%= link_to 'The Comical', root_path %></h1>
-    <span class="tagline">Your daily comic strip fix. <strong>Fast.</strong></span>
+    <div class="left">
+      <h1><%= link_to 'The Comical', root_path %></h1>
+      <span class="tagline">Your daily comic strip fix. Fast.</span>
+    </div>
+    <div class="right">
+      <%= render :partial => 'layouts/shared/header' %>
+    </div>
   </div>
 </header>
 

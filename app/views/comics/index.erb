@@ -1,13 +1,13 @@
-<div class="container">
-  <h2>The latest strips from&hellip;</h2>
-  <% @comics.each do |comic| %>
-  <article class="comic">
-    <h3><%= link_to comic.name, comic_path(comic) %></h3>
-    <% if comic.strips.find(:last) %>
-      <%= relative_date(comic.strips.find(:last).posted_on) %>
-    <% else %>
-      <span class="not-fetched">never been fetched</span>
-    <% end %>
-  </article>
+<% title "All comics" %>
+
+<h2>The latest strips from&hellip;</h2>
+<% @comics.each do |comic| %>
+<article class="comic">
+  <h3><%= link_to comic.name, comic_path(comic) %></h3>
+  <% if comic.strips.find(:last) %>
+    <%= relative_date(comic.strips.find(:last).posted_on) %>
+  <% else %>
+    <span class="not-fetched">never been fetched</span>
   <% end %>
-</div>
+</article>
+<% end %>

@@ -1,0 +1,17 @@
+<h2>The latest strips&hellip;</h2>
+
+<% if @comics.nil? %>
+<div class="container">
+  <p>No comics for your daily consumption&mdash;yet. <strong>Check back later.</strong></p>
+</div>
+<% else %>
+  <% @comics.each do |comic| %>
+  <% if comic.strips.find(:last) %>
+  <article class="strip">
+    <div class="image"><img src="<%= comic.strips.find(:last).image_url %>" alt="<%= comic.strips.find(:last).description %>" /></div>
+    <div class="container meta">
+    <span>posted <span class="posted"><%= relative_date(comic.strips.find(:last).posted_on) %></span> on <%= link_to comic.name, comic.site_url, :class => 'site' %></span>    </div>
+  </article>
+  <% end %>
+  <% end %>
+<% end %>

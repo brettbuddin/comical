@@ -1,8 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.root :controller => 'comics'
+  map.root :controller => 'comics', :action => 'index', :format => 'newspaper'
   map.resources :comics
-  
+    
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

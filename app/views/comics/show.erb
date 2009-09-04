@@ -2,13 +2,15 @@
 
 <h2><%= @comic.name %></h2>
 <% if @strip.nil? %>
-<p class="container">No strips have been pulled in for this comic yet.</p>
+<div class="container">
+  <p>No strips have been pulled in for this comic yet.</p>
+</div>
 <% else %>
 <article class="strip <%= name_slug(@strip.comic) %>">
   <div class="image"><img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" /></div>
   <h3><%= @strip.description %></h3>
-  <div class="meta">
-    <span class="posted">posted <%= relative_date(@strip.posted_on) %></span> <span class="site">on <%= link_to @strip.comic.name, @strip.comic.site_url %></span>
+  <div class="container meta">
+    <span>posted <span class="posted"><%= relative_date(@strip.posted_on) %></span> on <%= link_to @strip.comic.name, @strip.comic.site_url, :class => 'site' %></span>
   </div>
 </article>
 <% end %>
