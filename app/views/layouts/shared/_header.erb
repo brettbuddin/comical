@@ -1,4 +1,4 @@
 <ul id="navigation">
-  <li class="<% if the_action == 'index' and @format == 'list' %>selected <% end %>last"><%= link_to 'Comics List', comics_path %></li>
+  <li class="<% if the_action == 'index' and @format == 'list' %>selected <% end %>last"><%= link_to 'Comic List', comics_path %></li>
   <li<% if the_action == 'index' and @format == 'newspaper' %> class="selected"<% end %>><%= link_to 'Latest Strips', root_path %></li>
 </ul>
