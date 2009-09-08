@@ -37,7 +37,7 @@ article.comic .today { color: #333; }
 
 #comics-index article.strip h3 { margin-bottom: 1em; }
 #comics-index article.strip { margin-bottom: 5em; }
-#comics-index article.strip div.image { margin-bottom: 1em; }
+article.strip div.image { margin-bottom: 1em; }
 
 div.image { text-align: center; }
 div.meta { font: 140% Georgia, 'Times New Roman', serif; font-style: italic; }
