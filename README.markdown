@@ -15,3 +15,7 @@ Our feed update rake task is run with the following crontab entry:
 `*/30 0,07-23 * * * cd /home/brett/web/comical.intraspirit.net/public/current/ && /opt/ruby-enterprise-1.8.6-20090421/bin/rake feeds:update RAILS_ENV=production > /home/brett/web/comical.intraspirit.net/log/feeds_update.log`
 
 This directive instructs the machine to execute the rake task every half-hour, between the hours 7am-11pm and at 12am (the current environment's timezone is set to EST) every day.
+
+License
+======
+Released under GNU General Public License (GPL) version 3. Basically, this means that if you distribute changes, you must make them available under the same open-source license. http://www.gnu.org/copyleft/gpl.html
