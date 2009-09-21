@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title><%= (title = yield(:title)) ? "#{title} &mdash; " : '' %>The Comical</title>
+	<title><%= (title = yield(:title)) ? "#{title} &mdash; " : '' %>Comic Strip Fix</title>
 	<%= stylesheet_link_tag 'reset.css' %>
 	<%= stylesheet_link_tag 'main.css' %>
 	<script src="http://intraspirit.net/mint/?js" type="text/javascript"></script>
@@ -14,8 +14,8 @@
 <header class="clearfixed">
   <div class="container">
     <div class="left">
-      <h1><%= link_to 'The Comical', root_path %></h1>
-      <span class="tagline">Your daily comic strip fix. Fast.</span>
+      <h1><%= link_to 'Comic Strip Fix', root_path %></h1>
+      <span class="tagline">The latest of your favorites. Fast.</span>
     </div>
     <div class="right">
       <%= render :partial => 'layouts/shared/header' %>
@@ -31,7 +31,7 @@
   <div class="container">
     <div class="copyright">
       <span class="comics">All comics &copy; their respective authors.</span>
-      <span class="application">&ldquo;Comical&rdquo; application owned and maintained by <a href="http://intraspirit.net">Brett Buddin</a>.</span>
+      <span class="application">&ldquo;Comic Strip Fix&rdquo; application owned and maintained by <a href="http://intraspirit.net">Brett Buddin</a>.</span>
     </div>
   </div>
 </footer>

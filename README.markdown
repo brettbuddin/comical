@@ -1,6 +1,6 @@
-Comical
+Comic Strip Fix
 ==============
-Comical is a Rails application that periodically polls a selected set of web comics for updates so you don't have to. The application's purpose is not to keep an archive of past comic strips, but to allow the user to see only the latest strips. This fullfills the needs of most users, since they usually have to travel around, via their browser bookmarks, to see the daily comic strips. Another goal of the project is to provide users with a consistent UI for viewing strips.
+Comic Strip Fix is a Rails application that periodically polls a selected set of web comics for updates so you don't have to. The application's purpose is not to keep an archive of past comic strips, but to allow the user to see only the latest strips. This fullfills the needs of most users, since they usually have to travel around, via their browser bookmarks, to see the daily comic strips. Another goal of the project is to provide users with a consistent UI for viewing strips.
 
 Rake Task
 ======
