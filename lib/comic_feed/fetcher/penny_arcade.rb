@@ -17,7 +17,7 @@ module ComicFeed
         content = ''
         open("http://www.penny-arcade.com/#{url_parts[0]}") { |s| content = s.read }
         
-        img_url = content.match(/<img src="(http:\/\/art\.penny-arcade\.com\/photos\/.+\.jpg)" alt="#{data[:description]}"( )+\/>/)
+        img_url = content.match(/<img src="(http:\/\/art\.penny-arcade\.com\/photos\/.+\.jpg)" alt=".+"( )+\/>/)
         data[:image_url] = img_url[1]
         return data
       end
