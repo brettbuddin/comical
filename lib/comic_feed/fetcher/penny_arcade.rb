@@ -19,6 +19,8 @@ module ComicFeed
         
         img_url = content.match(/<img src="(http:\/\/art\.penny-arcade\.com\/photos\/.+\.jpg)" alt=".+"( )+\/>/)
         data[:image_url] = img_url[1]
+        data[:permalink] = "http://www.penny-arcade.com/#{url_parts[0]}"
+
         return data
       end
       

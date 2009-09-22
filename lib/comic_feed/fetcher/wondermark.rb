@@ -9,9 +9,11 @@ module ComicFeed
         break item if item.title.match(/#[0-9]+; .*/)
       end
       if latest
-        data[:description] = latest.title.match(/#[0-9]+; (.*)/)[1]
+        title_parts = latest.title.match(/#([0-9]+); (.*)/)
+        data[:description] = title_parts[2]
         data[:posted_on] = Date.parse(latest.pubDate.to_s)
         data[:image_url] = latest.description.match(/http:\/\/wondermark.com\/c\/.*\.gif/).to_s
+        data[:permalink] = "http://wondermark.com/#{title_parts[1]}/"
         
         return data
       end
