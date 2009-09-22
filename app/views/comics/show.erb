@@ -7,9 +7,12 @@
 </div>
 <% else %>
 <article class="strip <%= name_slug(@strip.comic) %>">
-  <div class="image"><img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" /></div>
-  <h3><%= @strip.description %></h3>
+  <div class="image">
+    <a href="<%= @strip.permalink %>"><img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" /></a>
+  </div>
+  <h3><a href="<%= @strip.permalink %>"><%= @strip.description %></a></h3>
   <div class="container meta">
+    <%= "<p>#{@strip.extra ? @strip.extra : ''}</p>" %>
     <span>posted <span class="posted"><%= relative_date(@strip.posted_on) %></span> on <%= link_to @strip.comic.name, @strip.comic.site_url, :class => 'site' %></span>
   </div>
 </article>

@@ -41,6 +41,7 @@ article.strip div.image { margin-bottom: 1em; }
 
 div.image { text-align: center; }
 div.meta { font: 140% Georgia, 'Times New Roman', serif; font-style: italic; }
+div.meta p { font-family: Helvetica, Arial, sans-serif; font-style: normal; margin-bottom: 1em; }
 
 footer { border-top: 1px solid #eee; padding-top: 1em; margin-bottom: 2em; color: #999; font-size: 120%; }
 footer .application,
