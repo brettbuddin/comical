@@ -8,12 +8,13 @@
 </div>
 <% else %>
   <% @comics.each do |comic| %>
-  <% if comic.strips.find(:last) %>
+  <% if latest = comic.strips.find(:last) %>
   <article class="strip">
-    <div class="image"><img src="<%= comic.strips.find(:last).image_url %>" alt="<%= comic.strips.find(:last).description %>" /></div>
-  <h3><%= comic.strips.find(:last).description %></h3>
+    <div class="image"><a href="<%= latest.permalink %>"><img src="<%= latest.image_url %>" alt="<%= latest.description %>" <%= latest.extra ? "title=\"#{latest.extra}\"" : '' %> /></a></div>
+    <h3><a href="<%= latest.permalink %>"><%= latest.description %></a></h3>
     <div class="container meta">
-    <span>posted <span class="posted"><%= relative_date(comic.strips.find(:last).posted_on) %></span> on <%= link_to comic.name, comic.site_url, :class => 'site' %></span>    </div>
+      <span>posted <span class="posted"><%= relative_date(comic.strips.find(:last).posted_on) %></span> on <%= link_to comic.name, comic.site_url, :class => 'site' %></span>
+    </div>
   </article>
   <% end %>
   <% end %>
