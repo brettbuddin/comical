@@ -46,3 +46,10 @@ sad_children:
   feed_url: http://www.rsspect.com/rss/pfsc.xml
   site_url: http://www.picturesforsadchildren.com/
   fetch_frequency: 127
+
+questionable_content:
+  name: Questionable Content
+  url_name: questionable-content
+  feed_url: http://www.questionablecontent.net/QCRSS.xml
+  site_url: http://www.questionablecontent.net/
+  fetch_frequency: 127
