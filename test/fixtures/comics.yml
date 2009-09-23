@@ -53,3 +53,10 @@ questionable_content:
   feed_url: http://www.questionablecontent.net/QCRSS.xml
   site_url: http://www.questionablecontent.net/
   fetch_frequency: 127
+
+ctrl_alt_del:
+  name: Ctrl+Alt+Del
+  url_name: ctrl-alt-del
+  feed_url: http://www.cad-comic.com/rss/rss.xml
+  site_url: http://www.ctrlaltdel-online.com/
+  fetch_frequency: 127

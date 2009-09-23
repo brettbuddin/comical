@@ -5,7 +5,7 @@ namespace :feeds do
         
     comics.each do |comic|
       begin
-        fetcher = "ComicFeed::#{comic.name.downcase.gsub(/[,'\"]/, '').gsub(/[ -]/, '_').camelize}Fetcher".constantize.new
+        fetcher = "ComicFeed::#{comic.name.downcase.gsub(/[+,'\"]/, '').gsub(/[ -]/, '_').camelize}Fetcher".constantize.new
         
         strip = Strip.new(fetcher.fetch(comic.feed_url))
         if latest = comic.strips.find(:last)
