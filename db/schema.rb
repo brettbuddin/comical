@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090922023005) do
+ActiveRecord::Schema.define(:version => 20090925215519) do
 
   create_table "comics", :force => true do |t|
     t.string   "feed_url"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20090922023005) do
   end
 
   create_table "strips", :force => true do |t|
-    t.string   "description"
+    t.text     "description", :limit => 255
     t.date     "posted_on"
     t.string   "image_url"
     t.integer  "comic_id"
