@@ -8,7 +8,7 @@ module ComicFeed
       latest = items.each { |item| break item if item.title.match(/LOLBOTS [0-9]+\/[0-9]+\/[0-9]+.*/) }
 
       if latest
-        data[:description] = latest.title.match(/LOLBOTS [0-9]+\/[0-9]+\/[0-9]+( :: )(.*)/)[2]
+        data[:description] = latest.title.match(/LOLBOTS [0-9]+\/[0-9]+\/[0-9]+( :: )?(.*)/)[2]
         data[:posted_on] = Date.parse(latest.pubDate.to_s)
         data[:permalink] = latest.link
         
