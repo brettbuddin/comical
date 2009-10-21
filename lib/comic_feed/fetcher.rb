@@ -6,7 +6,7 @@ require 'uri'
 
 module ComicFeed
 
-  class Fetcher  
+  class Fetcher
     def fetch(url)
       content = ''
       open(url) { |s| content = s.read }

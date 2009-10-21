@@ -60,3 +60,10 @@ ctrl_alt_del:
   feed_url: http://www.cad-comic.com/rss/rss.xml
   site_url: http://www.ctrlaltdel-online.com/
   fetch_frequency: 127
+
+lolbots:
+  name: LOLBOTS
+  url_name: lolbots
+  feed_url: http://www.lolbots.com/lol.xml
+  site_url: http://www.lolbots.com/
+  fetch_frequency: 127
