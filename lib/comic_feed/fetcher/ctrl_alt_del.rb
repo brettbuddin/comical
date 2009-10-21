@@ -14,7 +14,6 @@ module ComicFeed
         data[:permalink] = latest.link
         
         url_parts = latest.link.match(/([0-9]+)-([0-9]+)-([0-9]+)/)
-        puts url_parts
         data[:image_url] = "http://www.ctrlaltdel-online.com/comics/#{url_parts[1]}#{url_parts[2]}#{url_parts[3]}.jpg"
 
         return data
