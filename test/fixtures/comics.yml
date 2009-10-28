@@ -74,3 +74,10 @@ schlock_mercenary:
   feed_url: http://feeds.feedburner.com/SchlockRSS?format=xml
   site_url: http://schlockmercenary.com
   fetch_frequency: 127
+
+cyanide_and_happiness:
+  name: Cyanide and Happiness
+  url_name: cyanide-and-happiness
+  feed_url: http://feeds.feedburner.com/Explosm
+  site_url: http://www.explosm.net/comics
+  fetch_frequency: 127
