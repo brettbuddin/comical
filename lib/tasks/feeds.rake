@@ -16,8 +16,7 @@ namespace :feeds do
           comic.strips << strip
         end
       rescue
-        puts "Problem with #{comic.name}:"
-        puts $!
+        puts "#{comic.name} Failed"
       end
     end
   end
