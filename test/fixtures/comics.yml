@@ -81,3 +81,10 @@ cyanide_and_happiness:
   feed_url: http://feeds.feedburner.com/Explosm
   site_url: http://www.explosm.net/comics
   fetch_frequency: 127
+
+hijinks_ensue:
+  name: Hijinks Ensue
+  url_name: hijinks-ensue
+  feed_url: http://hijinksensue.com/feed/
+  site_url: http://hijinksensue.com/
+  fetch_frequency: 127
