@@ -67,3 +67,10 @@ lolbots:
   feed_url: http://www.lolbots.com/lol.xml
   site_url: http://www.lolbots.com/
   fetch_frequency: 127
+
+schlock_mercenary:
+  name: Schlock Mercenary
+  url_name: schlock-mercenary
+  feed_url: http://feeds.feedburner.com/SchlockRSS?format=xml
+  site_url: http://schlockmercenary.com
+  fetch_frequency: 127
