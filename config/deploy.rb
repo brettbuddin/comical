@@ -32,7 +32,7 @@ set :scm, 'git'
 set :branch, 'master'
 role :web, 'intraspirit.net'
 role :app, 'intraspirit.net'
-role :db, 'intraspirit.net'
+role :db, 'intraspirit.net', :primary => true
 
 set :user, 'brett'
 
