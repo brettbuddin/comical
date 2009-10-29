@@ -3,88 +3,75 @@ xkcd:
   url_name: xkcd
   feed_url: http://www.xkcd.com/rss.xml
   site_url: http://xkcd.com/
-  fetch_frequency: 127
 
 dinosaur_comics:
   name: Dinosaur Comics
   url_name: dinosaur-comics
   feed_url: http://www.rsspect.com/rss/qwantz.xml
   site_url: http://www.qwantz.com/
-  fetch_frequency: 127
   
 wondermark:
   name: Wondermark
   url_name: wondermark
   feed_url: http://feeds.feedburner.com/wondermark
   site_url: http://wondermark.com/
-  fetch_frequency: 127
   
 penny_arcade:
   name: Penny Arcade
   url_name: penny-arcade
   feed_url: http://feeds.penny-arcade.com/pa-mainsite/
   site_url: http://www.penny-arcade.com/
-  fetch_frequency: 127
   
 hark_vagrant:
   name: Hark, A Vagrant
   url_name: hark-a-vagrant
   feed_url: http://www.rsspect.com/rss/vagrant.xml
   site_url: http://www.harkavagrant.com/
-  fetch_frequency: 127
 
 nedroid:
   name: Nedroid Picture Diary
   url_name: nedroid-picture-diary
   feed_url: http://nedroid.com/feed/
   site_url: http://nedroid.com/
-  fetch_frequency: 127
 
 sad_children:
   name: Pictures for Sad Children
   url_name: pictures-for-sad-children
   feed_url: http://www.rsspect.com/rss/pfsc.xml
   site_url: http://www.picturesforsadchildren.com/
-  fetch_frequency: 127
 
 questionable_content:
   name: Questionable Content
   url_name: questionable-content
   feed_url: http://www.questionablecontent.net/QCRSS.xml
   site_url: http://www.questionablecontent.net/
-  fetch_frequency: 127
 
 ctrl_alt_del:
   name: Ctrl+Alt+Del
   url_name: ctrl-alt-del
   feed_url: http://www.cad-comic.com/rss/rss.xml
   site_url: http://www.ctrlaltdel-online.com/
-  fetch_frequency: 127
 
 lolbots:
   name: LOLBOTS
   url_name: lolbots
   feed_url: http://www.lolbots.com/lol.xml
   site_url: http://www.lolbots.com/
-  fetch_frequency: 127
 
 schlock_mercenary:
   name: Schlock Mercenary
   url_name: schlock-mercenary
   feed_url: http://feeds.feedburner.com/SchlockRSS?format=xml
   site_url: http://schlockmercenary.com
-  fetch_frequency: 127
 
 cyanide_and_happiness:
   name: Cyanide and Happiness
   url_name: cyanide-and-happiness
   feed_url: http://feeds.feedburner.com/Explosm
   site_url: http://www.explosm.net/comics
-  fetch_frequency: 127
 
 hijinks_ensue:
   name: Hijinks Ensue
   url_name: hijinks-ensue
   feed_url: http://hijinksensue.com/feed/
   site_url: http://hijinksensue.com/
-  fetch_frequency: 127
