@@ -75,3 +75,9 @@ hijinks_ensue:
   url_name: hijinks-ensue
   feed_url: http://hijinksensue.com/feed/
   site_url: http://hijinksensue.com/
+
+dilbert:
+  name: Dilbert
+  url_name: dilbert
+  feed_url: http://feeds.dilbert.com/DilbertDailyStrip
+  site_url: http://www.dilbert.com/
