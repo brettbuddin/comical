@@ -6,15 +6,15 @@ module ComicFeed
 
       items = xml.channel.items
       latest = items.each do |item|
-        break item if item.title.match(/Comic: .*/)
+        break item if item.title.match(/Cad: .*/)
       end
       if latest
-        data[:description] = latest.title.match(/Comic: (.*)/)[1]
+        data[:description] = latest.title.match(/Cad: (.*)/)[1]
         data[:posted_on] = Date.parse(latest.pubDate.to_s)
-        data[:permalink] = latest.link
-        
-        url_parts = latest.link.match(/([0-9]+)-([0-9]+)-([0-9]+)/)
-        data[:image_url] = "http://www.ctrlaltdel-online.com/comics/#{url_parts[1]}#{url_parts[2]}#{url_parts[3]}.jpg"
+
+        date = data[:posted_on].strftime('%Y%m%d')
+        data[:permalink] = "http://www.cad-comic.com/cad/#{date}"
+        data[:image_url] = "http://www.cad-comic.com/comics/cad/#{date}.jpg"
 
         return data
       end

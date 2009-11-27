@@ -49,8 +49,8 @@ questionable_content:
 ctrl_alt_del:
   name: Ctrl+Alt+Del
   url_name: ctrl-alt-del
-  feed_url: http://www.cad-comic.com/rss/rss.xml
-  site_url: http://www.ctrlaltdel-online.com/
+  feed_url: http://feeds.feedburner.com/cad-comic
+  site_url: http://www.cad-comic.com/cad/
 
 lolbots:
   name: LOLBOTS

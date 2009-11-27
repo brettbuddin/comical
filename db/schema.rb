@@ -11,19 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20091029161717) do
 
-  create_table "accounts", :force => true do |t|
-    t.string   "identity_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "accounts_comics", :id => false, :force => true do |t|
-    t.integer  "account_id"
-    t.integer  "comic_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "comics", :force => true do |t|
     t.string   "feed_url"
     t.string   "name"
@@ -31,21 +18,6 @@ ActiveRecord::Schema.define(:version => 20091029161717) do
     t.datetime "updated_at"
     t.string   "url_name"
     t.string   "site_url"
-  end
-
-  create_table "open_id_authentication_associations", :force => true do |t|
-    t.integer "issued"
-    t.integer "lifetime"
-    t.string  "handle"
-    t.string  "assoc_type"
-    t.binary  "server_url"
-    t.binary  "secret"
-  end
-
-  create_table "open_id_authentication_nonces", :force => true do |t|
-    t.integer "timestamp",  :null => false
-    t.string  "server_url"
-    t.string  "salt",       :null => false
   end
 
   create_table "strips", :force => true do |t|
