@@ -1,40 +1,22 @@
 <!DOCTYPE html>
-
+ 
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title><%= (title = yield(:title)) ? "#{title} &mdash; " : '' %>Comic Strip Fix</title>
-	<%= stylesheet_link_tag 'reset.css' %>
-	<%= stylesheet_link_tag 'main.css' %>
-	<script src="http://intraspirit.net/mint/?js" type="text/javascript"></script>
+    <%= stylesheet_link_tag 'reset.css' %>
+    <%= stylesheet_link_tag 'main.css' %>
 </head>
-
+ 
 <body id="<%= page_id %>">
 
-<header class="clearfixed">
-  <div class="container">
-    <div class="left">
-      <h1><%= link_to 'Comic Strip Fix', root_path %></h1>
-      <span class="tagline">The latest from your favorites. Fast.</span>
-    </div>
-    <div class="right">
-      <%= render :partial => 'layouts/shared/header' %>
-    </div>
-  </div>
-</header>
-
+<%= render :partial => "layouts/shared/header" %>
+ 
 <div id="content">
   <%= yield %>
 </div>
-
-<footer>
-  <div class="container">
-    <div class="copyright">
-      <span class="comics">All comics &copy; their respective authors.</span>
-      <span class="application">&ldquo;Comic Strip Fix&rdquo; application owned and <a href="http://github.com/brettbuddin/comical">maintained</a> by <a href="http://intraspirit.net">Brett Buddin</a>.</span>
-    </div>
-  </div>
-</footer>
-
+ 
+<%= render :partial => "layouts/shared/footer" %>
+ 
 </body>
 </html>

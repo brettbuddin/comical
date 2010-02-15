@@ -1,11 +1,8 @@
 <h2>The latest strips from&hellip;</h2>
-<% @comics.each do |comic| %>
+<% @comics.sort { |x,y| x.site_name <=> y.site_name}.each do |comic| %>
 <article class="comic">
-  <h3><%= link_to comic.name, comic_path(comic) %></h3>
-  <% if comic.strips.find(:last) %>
-    <%= relative_date(comic.strips.find(:last).posted_on) %>
-  <% else %>
-    <span class="not-fetched">never been fetched</span>
-  <% end %>
+  <h3><%= link_to comic.site_name, "/comics/#{comic.url_name}" %></h3>
+  <%= relative_date(comic.posted_on) %>
 </article>
 <% end %>
+

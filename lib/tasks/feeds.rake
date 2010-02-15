@@ -1,22 +1,26 @@
 namespace :feeds do
-  
+
   task :update => :environment do
-    comics = Comic.find :all
-        
-    comics.each do |comic|
-        begin
-          fetcher = "ComicFeed::#{comic.name.downcase.gsub(/[+,'\"]/, '').gsub(/[ -]/, '_').camelize}Fetcher".constantize.new
-          
-          strip = Strip.new(fetcher.fetch(comic.feed_url))
-          if latest = comic.strips.find(:last)
-            if strip.image_url != latest.image_url
-              comic.strips << strip
+    Dir.glob(File.join(File.dirname(__FILE__), '../../app/models/comics/*.rb')).each do |f|
+      begin
+        comic = File.basename(f).to(-4).underscore.camelize.constantize.new
+        xml = comic.fetch
+
+        if xml
+          comic.map(xml)
+          if latest = comic.class.find(:last)
+            if comic.image_url != latest.image_url
+              comic.save
             end
           else
-            comic.strips << strip
+            comic.save
           end
-        rescue; end
+        end #xml
+      rescue
+        puts "Error: #{$!}"
+      end
     end
   end
-  
+
 end
+

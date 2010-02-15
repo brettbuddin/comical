@@ -1,4 +1,6 @@
-<ul id="navigation">
-  <li class="<% if the_action == 'index' and @format == 'newspaper' %>selected <% end %>last"><%= link_to "The Latest", latest_path %></li>
-  <li<% if the_action == 'index' and @format == 'list' %> class="selected"<% end %>><%= link_to 'Comic List', root_path %></li>
-</ul>
+<header class="clearfixed">
+  <div class="container">
+    <h1><%= link_to 'Comic Strip Fix', root_path %></h1>
+    <span class="tagline">The latest from your favorites. Fast.</span>
+  </div>
+</header>

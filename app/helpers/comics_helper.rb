@@ -1,6 +1,6 @@
 module ComicsHelper
   def name_slug(comic)
-    "#{comic.name.gsub(/[^a-z0-9]+/i, '-').downcase}"
+    "#{comic.site_name.gsub(/[^a-z0-9]+/i, '-').downcase}"
   end
   
   def relative_date(posted_on)

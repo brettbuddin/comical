@@ -1,19 +1,13 @@
-<% title "The latest from #{@comic.name}" %>
-
-<h2><%= @comic.name %></h2>
-<% if @strip.nil? %>
-<div class="container">
-  <p>No strips have been pulled in for this comic yet.</p>
-</div>
-<% else %>
-<article class="strip <%= name_slug(@strip.comic) %>">
+<% title "The latest from #{@comic.site_name}" %>
+ 
+<h2><%= @comic.site_name %></h2>
+<article class="strip">
   <div class="image">
-    <a href="<%= @strip.permalink %>"><img src="<%= @strip.image_url %>" alt="<%= @strip.description %>" /></a>
+    <a href="<%= @comic.permalink %>"><img src="<%= @comic.image_url %>" alt="<%= @comic.description %>" /></a>
   </div>
-  <h3><a href="<%= @strip.permalink %>"><%= @strip.description %></a></h3>
+  <h3><a href="<%= @comic.permalink %>"><%= @comic.description %></a></h3>
   <div class="container meta">
-    <%= "<p>#{@strip.extra ? @strip.extra : ''}</p>" %>
-    <span>posted <span class="posted"><%= relative_date(@strip.posted_on) %></span> on <%= link_to @strip.comic.name, @strip.comic.site_url, :class => 'site' %></span>
+    <%= "<p>#{@comic.extra ? @comic.extra : ''}</p>" %>
+    <span>posted <span class="posted"><%= relative_date(@comic.posted_on) %></span> on <%= link_to @comic.site_name, @comic.url_name, :class => 'site' %></span>
   </div>
 </article>
-<% end %>

@@ -9,26 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091029161717) do
+ActiveRecord::Schema.define(:version => 20100214193817) do
 
   create_table "comics", :force => true do |t|
-    t.string   "feed_url"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "url_name"
-    t.string   "site_url"
-  end
-
-  create_table "strips", :force => true do |t|
-    t.text     "description", :limit => 255
+    t.text     "description"
+    t.string   "extra"
     t.date     "posted_on"
     t.string   "image_url"
-    t.integer  "comic_id"
+    t.string   "permalink"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "extra"
-    t.string   "permalink"
   end
 
 end

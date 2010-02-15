@@ -35,4 +35,34 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  def self.should_describe_site
+    should "set site name" do
+      assert subject.respond_to?(:site_name)
+    end
+    should "set site URL" do
+      assert subject.respond_to?(:site_url)
+    end
+  end
+
+  def self.should_describe_feed
+    should "set feed URL" do
+      assert subject.respond_to?(:feed_url)
+    end
+  end
+
+  def self.should_map
+    should "map feed to model" do
+      subject.map(subject.fetch) 
+      assert subject.valid?
+      
+      if subject.image_url
+        content = ''
+        begin
+          open(subject.image_url) { |s| content = s.read }
+        rescue; end
+        assert !content.empty?
+      end
+    end
+  end
 end

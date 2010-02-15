@@ -1,9 +1,13 @@
 class CreateComics < ActiveRecord::Migration
   def self.up
     create_table :comics do |t|
-      t.string :feed_url
-      t.string :name
-      t.integer :fetch_frequency
+      t.text :description
+      t.string :extra
+      t.date :posted_on
+      t.string :image_url
+      t.string :permalink
+      t.string :type
+
       t.timestamps
     end
   end
