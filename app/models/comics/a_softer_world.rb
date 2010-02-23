@@ -1,6 +1,6 @@
 class ASofterWorld < Comic
   site_name "A Softer World"
-  site_url "http://asofterworld.com"
+  site_url "http://www.asofterworld.com"
   feed_url "http://www.rsspect.com/rss/asw.xml"
   
   def map_routine(xml)
