@@ -25,7 +25,7 @@ The first thing you should do is create a unit test, because this will give you 
 
 2. Implement your model
 ------
-Next, you'll implement a new model to make Comical aware of your comic. Comical looks for the separate comic implementations in the `app/models/comics` directory. There are three *required* class methods that you will use to describe the site details and feed location to the application; those are:
+Next, you'll write new sub-class of the `Comic` model to make the application aware of your comic. Comical looks for the separate comic implementations in the `app/models/comics` directory. There are three *required* class methods that you will use to describe the site details and feed location to the application; those are:
 
 > `site_name` Sets the name of the comic to be used throughout the site.
 >
