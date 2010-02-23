@@ -41,7 +41,7 @@ Additionally, you'll define your very own `map_routine(xml)` that will map XML d
 >
 > `image_url:string`  URL of the comic strip image.
 >
-> `permalink:string` Permalink to the page that shows the comic strip image on the author's website.
+> `permalink:string` Permalink to the page on the author's website that shows the comic strip.
 >
 > `extra:string` (Optional) Extra textual information that comes along with the comic strip. Examples: description, alt text, title text (xkcd anyone?)
 
