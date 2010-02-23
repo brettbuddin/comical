@@ -45,7 +45,7 @@ Additionally, you'll define your very own `map_routine(xml)` that will map XML d
 >
 > `extra:string` (Optional) Extra textual information that comes along with the comic strip. Examples: description, alt text, title text (xkcd anyone?)
 
-Example model implementation: [app/model/comics/xkcd.rb](http://github.com/brettbuddin/comical/blob/master/app/model/comics/xkcd.rb)
+Example model implementation: [app/model/comics/xkcd.rb](http://github.com/brettbuddin/comical/blob/master/app/models/comics/xkcd.rb)
 
 3. Feeds:Update and Enjoy
 ------
