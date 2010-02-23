@@ -39,9 +39,6 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   
-  #Dir.glob(File.join(File.dirname(__FILE__), '../lib/comic_feed/*.rb')).each { |f| require f }
-  #Dir.glob(File.join(File.dirname(__FILE__), '../lib/comic_feed/fetcher/*.rb')).each { |f| require f }
-
   config.load_paths << "#{RAILS_ROOT}/app/concerns"
   config.load_paths << "#{RAILS_ROOT}/app/models/comics"
 end
