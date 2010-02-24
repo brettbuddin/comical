@@ -11,7 +11,7 @@ class ASofterWorld < Comic
 
     if latest
       real_title = latest.description.match(/title="(.*)"/)[1]
-      number = latest.title.match(/A Softer World: (.*)/)[1]
+      number = latest.title.match(/A Softer World: (.*)/)[1].strip
       self.description = "#{number}: #{real_title}"
       self.posted_on = Date.parse(latest.pubDate.to_s)
       date = self.posted_on.strftime('%Y%m%d')
