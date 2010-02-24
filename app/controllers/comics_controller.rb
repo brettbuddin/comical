@@ -1,7 +1,10 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Comic.find(:all, :order => 'created_at DESC', :group => :type) 
-    @updated = @comics.select { |comic| Date.today == comic.posted_on }
+    @comics = []
+    comics = Comic.find(:all).to_set.classify { |comic| comic.class.name }
+    comics.each do |comic, list|
+      @comics << list.to_a[0]  
+    end
   end
 
   def show
@@ -11,7 +14,7 @@ class ComicsController < ApplicationController
     end
 
     if comics.include?(slug)
-      @comic = comics[comics.index(slug)].camelize.constantize.find(:last)
+      @comic = comics[comics.index(slug)].camelize.constantize.find(:last, :order => 'posted_on ASC')
       raise ActiveRecord::RecordNotFound unless @comic
     else
       raise ActiveRecord::RecordNotFound

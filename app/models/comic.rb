@@ -24,10 +24,6 @@ class Comic < ActiveRecord::Base
     self
   end
 
-  def eql?(comparee)
-    self.class.to_s == comparee.class.to_s
-  end
-
   class << self
     def site_name(name)
       define_method :site_name, lambda { name }
