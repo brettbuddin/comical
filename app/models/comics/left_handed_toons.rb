@@ -13,9 +13,7 @@ class LeftHandedToons < Comic
       self.description = latest.title
       self.posted_on = Date.parse(latest.pubDate.to_s)
       self.image_url = latest.description.match(/http:\/\/www\.lefthandedtoons\.com\/toons\/[^\/]+\.gif/)[0] 
-
-      match = latest.description.match(/http:\/\/www\.lefthandedtoons\.com\/[0-9]+/)[0]
-      self.permalink = match
+      self.permalink = latest.description.match(/http:\/\/www\.lefthandedtoons\.com\/[0-9]+/)[0]
     end
   end
 end
