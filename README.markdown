@@ -47,11 +47,11 @@ Additionally, you'll define your very own `map_routine(xml)` that will map XML d
 
 Example model implementation: [app/model/comics/xkcd.rb](http://github.com/brettbuddin/comical/blob/master/app/models/comics/xkcd.rb)
 
-3. Feeds:Update and Enjoy
+3. Feeds:Update
 ------
 The next time you run `rake feeds:update`, the application will use your new model to fetch the comic.
 
-4. Pull Request
+4. Pull Request and Enjoy
 ------
 Submit a [pull request](http://github.com/brettbuddin/comical/pull_request/) so that we can get your comic added to [comicstripfix.com](http://comicstripfix.com)!
 
