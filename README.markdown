@@ -53,7 +53,7 @@ The next time you run `rake feeds:update`, the application will use your new mod
 
 4. Pull Request
 ------
-Submit a [pull request](http://github.com/brettbuddin/comical/pull_request/) so that we can get your comic added to http://comicstripfix.com!
+Submit a [pull request](http://github.com/brettbuddin/comical/pull_request/) so that we can get your comic added to [comicstripfix.com](http://comicstripfix.com)!
 
 License
 ======
