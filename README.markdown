@@ -51,6 +51,10 @@ Example model implementation: [app/model/comics/xkcd.rb](http://github.com/brett
 ------
 The next time you run `rake feeds:update`, the application will use your new model to fetch the comic.
 
+4. Pull Request
+------
+Submit a [pull request](http://github.com/brettbuddin/comical/pull_request/) so that we can get your comic added to http://comicstripfix.com!
+
 License
 ======
 Released under GNU General Public License (GPL) version 3. Basically, this means that if you distribute changes, you must make them available under the same open-source license. http://www.gnu.org/copyleft/gpl.html
