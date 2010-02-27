@@ -53,13 +53,13 @@ class ActiveSupport::TestCase
 
   def self.should_map
     should "map feed to model" do
-      subject.map(subject.fetch) 
-      assert subject.valid?
+      model = subject.map(subject.fetch) 
+      assert model.valid?
       
-      if subject.image_url
+      if model.image_url
         content = ''
         begin
-          open(subject.image_url) { |s| content = s.read }
+          open(model.image_url) { |s| content = s.read }
         rescue; end
         assert !content.empty?
       end
