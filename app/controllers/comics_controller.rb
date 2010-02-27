@@ -5,9 +5,7 @@ class ComicsController < ApplicationController
 
   def show
     slug = params[:id].underscore
-    comics = Dir.glob(File.join(File.dirname(__FILE__), '../../app/models/comics/*.rb')).collect do |f|
-      File.basename(f).to(-4)
-    end
+    comics = comic_list
 
     if comics.include?(slug)
       @comic = comics[comics.index(slug)].camelize.constantize.find(:last, :order => 'posted_on ASC')
@@ -17,7 +15,7 @@ class ComicsController < ApplicationController
     end
   end
 
-  def comics
+  def comic_list
     Dir.glob(File.join(File.dirname(__FILE__), '../../app/models/comics/*.rb')).collect do |f|
       File.basename(f).to(-4)
     end
