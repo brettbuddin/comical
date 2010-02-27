@@ -1,5 +1,5 @@
 class PicturesForSadChildren < Comic
-  site_name "Picures for Sad Children"
+  site_name "Pictures for Sad Children"
   site_url "http://www.picturesforsadchildren.com"
   feed_url "http://www.rsspect.com/rss/pfsc.xml"
   
