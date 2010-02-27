@@ -3,7 +3,7 @@ class ComicsController < ApplicationController
     @comics = []
     comics = Comic.find(:all).to_set.classify { |comic| comic.class.name }
     comics.each do |comic, list|
-      @comics << list.to_a[0]  
+      @comics << list.sort { |x,y| y.posted_on <=> x.posted_on}[0]
     end
   end
 
