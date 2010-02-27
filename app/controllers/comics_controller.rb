@@ -1,10 +1,6 @@
 class ComicsController < ApplicationController
   def index
-    @comics = []
-    comics = Comic.find(:all).to_set.classify { |comic| comic.class.name }
-    comics.each do |comic, list|
-      @comics << list.sort { |x,y| y.posted_on <=> x.posted_on}[0]
-    end
+    @comics = Comic.find(:all, :select => 'type,max(posted_on) as posted_on', :group => :type)
   end
 
   def show
@@ -18,6 +14,12 @@ class ComicsController < ApplicationController
       raise ActiveRecord::RecordNotFound unless @comic
     else
       raise ActiveRecord::RecordNotFound
+    end
+  end
+
+  def comics
+    Dir.glob(File.join(File.dirname(__FILE__), '../../app/models/comics/*.rb')).collect do |f|
+      File.basename(f).to(-4)
     end
   end
 end
