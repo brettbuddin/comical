@@ -36,7 +36,7 @@ role :db, 'intraspirit.net', :primary => true
 
 set :user, 'brett'
 
-set :deploy_to, '/home/brett/web/comical.intraspirit.net/public'
+set :deploy_to, '/home/brett/web/comicstripfix.com/deploy'
 
 namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
