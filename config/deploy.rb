@@ -5,10 +5,12 @@ set :branch, 'master'
 role :web, 'intraspirit.net'
 role :app, 'intraspirit.net'
 role :db, 'intraspirit.net', :primary => true
+set :rake, "/opt/ruby-enterprise-1.8.7-2010.02/bin/rake"
 
 set :user, 'brett'
 
-set :deploy_to, '/home/brett/web/comicstripfix.com/deploy'
+set :deploy_to, '/var/www/comicstripfix.com/deploy'
+set :use_sudo, false
 
 namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
