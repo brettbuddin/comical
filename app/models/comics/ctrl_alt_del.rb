@@ -6,11 +6,11 @@ class CtrlAltDel < Comic
   def map_routine(xml)
     items = xml.channel.items
     latest = items.each do |item|
-      break item if item.title.match(/Cad: .*/)
+      break item if item.title.match(/Ctrl\+Alt\+Del/)
     end
 
     if latest
-      self.description = latest.title.match(/Cad: (.*)/)[1]
+      self.description = latest.title.match(/Ctrl\+Alt\+Del: (.*)/)[1]
       self.posted_on = Date.parse(latest.pubDate.to_s)
       date = self.posted_on.strftime('%Y%m%d')
       self.permalink = "http://#{site_url.host}/cad/#{date}"
