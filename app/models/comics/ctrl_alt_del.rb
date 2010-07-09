@@ -14,7 +14,11 @@ class CtrlAltDel < Comic
       self.posted_on = Date.parse(latest.pubDate.to_s)
       date = self.posted_on.strftime('%Y%m%d')
       self.permalink = "http://#{site_url.host}/cad/#{date}"
-      self.image_url = "http://#{site_url.host}/comics/cad/#{date}.jpg"
+
+      content = ''
+      open(site_url) { |s| content = s.read }
+      img_url = content.match(/"(\/comics\/.+\.jpg)"/)
+      self.image_url = "http://#{site_url.host}#{img_url[1]}"
     end
   end
 end

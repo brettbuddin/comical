@@ -7,7 +7,7 @@
   </div>
   <h3><a href="<%= @comic.permalink %>"><%= @comic.description %></a></h3>
   <div class="container meta">
-    <%= "<p>#{@comic.extra ? @comic.extra : ''}</p>" %>
-    <span>posted <span class="posted"><%= relative_date(@comic.posted_on) %></span> on <%= link_to @comic.site_name, @comic.site_url.to_s, :class => 'site' %></span>
+    <%= "<p>#{@comic.extra ? @comic.extra : ''}</p>".html_safe %>
+    <span>posted <span class="posted"><%= relative_date(@comic.posted_on).html_safe %></span> on <%= link_to @comic.site_name, @comic.site_url.to_s, :class => 'site' %></span>
   </div>
 </article>

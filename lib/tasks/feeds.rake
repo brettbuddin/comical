@@ -17,7 +17,7 @@ namespace :feeds do
           end
         end #xml
       rescue
-        puts "Error: #{$!}"
+        puts "Error: #{$!} {$.}"
       end
     end
   end

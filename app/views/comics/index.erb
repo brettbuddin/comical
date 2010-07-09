@@ -2,7 +2,7 @@
 <% @comics.sort { |x,y| x.site_name <=> y.site_name}.each do |comic| %>
 <article class="comic">
   <h3><%= link_to comic.site_name, "/comics/#{comic.url_name}" %></h3>
-  <%= relative_date(comic.posted_on) %>
+  <%= relative_date(comic.posted_on).html_safe %>
 </article>
 <% end %>
 
