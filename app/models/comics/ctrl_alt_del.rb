@@ -1,6 +1,6 @@
 class CtrlAltDel < Comic
   site_name "Ctrl Alt Del"
-  site_url "http://www.cad-comic.com/cad"
+  site_url "http://cad-comic.com/cad"
   feed_url "http://feeds.feedburner.com/cad-comic"
   
   def map_routine(xml)
@@ -18,7 +18,7 @@ class CtrlAltDel < Comic
       content = ''
       open(site_url) { |s| content = s.read }
       img_url = content.match(/"(\/comics\/.+\.jpg)"/)
-      self.image_url = "http://#{site_url.host}#{img_url[1]}"
+      self.image_url = "http://static.#{site_url.host}#{img_url[1]}"
     end
   end
 end
