@@ -6,13 +6,14 @@ class LeftHandedToons < Comic
   def map_routine(xml)
     items = xml.channel.items
     latest = items.each do |item|
-      break item if item.description.match(/http:\/\/www\.lefthandedtoons\.com\/toons\/[^\/]+\.gif/)
+      break item if item.description.match(/http:\/\/www\.lefthandedtoons\.com\/toon\/[^\/]+\.gif/)
     end
 
     if latest
       self.description = latest.title
       self.posted_on = Date.parse(latest.pubDate.to_s)
-      self.image_url = latest.description.match(/http:\/\/www\.lefthandedtoons\.com\/toons\/[^\/]+\.gif/)[0] 
+      image = latest.description.match(/http:\/\/www\.lefthandedtoons\.com\/toon\/([^\/]+\.gif)/)[1]
+      self.image_url = "#{site_url}/toons/#{image}"
       self.permalink = latest.description.match(/http:\/\/www\.lefthandedtoons\.com\/[0-9]+/)[0]
     end
   end
