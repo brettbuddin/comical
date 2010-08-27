@@ -16,7 +16,7 @@ module Comics
 
     config.time_zone = 'UTC'
 
-    config.load_paths << "#{Rails.root}/app/concerns"
-    config.load_paths << "#{Rails.root}/app/models/comics"
+    config.autoload_paths << "#{Rails.root}/app/concerns"
+    config.autoload_paths << "#{Rails.root}/app/models/comics"
   end
 end
