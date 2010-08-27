@@ -17,8 +17,8 @@ class CtrlAltDel < Comic
 
       content = ''
       open(site_url) { |s| content = s.read }
-      img_url = content.match(/"http:\/\/cdn.cad-comic.com\/comics\/.+\.jpg"/)
-      self.image_url = img_url[0]
+      img_url = content.match(/"(http:\/\/cdn.cad-comic.com\/comics\/.+\.jpg)"/)
+      self.image_url = img_url[1]
     end
   end
 end
