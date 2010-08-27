@@ -13,7 +13,7 @@ class CtrlAltDel < Comic
       self.description = latest.title.match(/Ctrl\+Alt\+Del: (.*)/)[1]
       self.posted_on = Date.parse(latest.pubDate.to_s)
       date = self.posted_on.strftime('%Y%m%d')
-      self.permalink = "http://#{site_url.host}/cad/#{date}"
+      self.permalink = "#{site_url}/#{date}"
 
       content = ''
       open(site_url) { |s| content = s.read }

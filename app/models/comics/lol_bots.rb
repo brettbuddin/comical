@@ -13,7 +13,7 @@ class LolBots < Comic
       self.permalink = latest.link
       
       date = latest.link.match(/[0-9]+/)[0]
-      self.image_url = "http://www.lolbots.com/strips/#{date}.png"
+      self.image_url = "#{site_url}/strips/#{date}.png"
     end
   end
 end

@@ -15,10 +15,10 @@ class PennyArcade < Comic
       
       url_parts = latest.guid.to_s.match(/comic\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([^\/]*)/)
       
-      self.permalink = "http://www.penny-arcade.com/#{url_parts[0]}"
+      self.permalink = "#{site_url}/#{url_parts[0]}"
 
       content = ''
-      open("http://www.penny-arcade.com/#{url_parts[0]}") { |s| content = s.read }
+      open("#{site_url}/#{url_parts[0]}") { |s| content = s.read }
       img_url = content.match(/<img src="(http:\/\/art\.penny-arcade\.com\/photos\/.+\.jpg)" alt=".+"( )+\/>/)
       self.image_url = img_url[1]
     end

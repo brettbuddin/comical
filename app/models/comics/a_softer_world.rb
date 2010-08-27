@@ -15,7 +15,7 @@ class ASofterWorld < Comic
       self.description = "#{number}: #{real_title}"
       self.posted_on = Date.parse(latest.pubDate.to_s)
       date = self.posted_on.strftime('%Y%m%d')
-      self.permalink = "http://#{site_url.host}/index.php?id=#{number}"
+      self.permalink = "#{site_url}/index.php?id=#{number}"
       self.image_url = latest.description.match(/http:\/\/www\.asofterworld\.com\/clean\/[^\/]+\.jpg/).to_s
     end
   end

@@ -14,7 +14,7 @@ class Wondermark < Comic
       self.description = title_parts[2]
       self.posted_on = Date.parse(latest.pubDate.to_s)
       self.image_url = latest.description.match(/http:\/\/wondermark.com\/c\/.*\.gif/).to_s
-      self.permalink = "http://wondermark.com/#{title_parts[1]}/"
+      self.permalink = "#{site_url}/#{title_parts[1]}/"
     end
   end
 end
