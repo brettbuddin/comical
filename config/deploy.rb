@@ -1,3 +1,5 @@
+default_environment['PATH'] = "/opt/ruby-enterprise-1.8.7-2010.02/bin:/usr/local/bin:$PATH"
+
 set :application, 'comical'
 set :repository, 'git@github.com:brettbuddin/comical.git'
 set :scm, 'git'
@@ -30,3 +32,17 @@ namespace :deploy do
     end
   end
 end
+
+namespace :bundler do
+  task :create_symlink, :roles => :app do
+    shared_dir = File.join(shared_path, 'bundle')
+    release_dir = File.join(current_release, 'vendor/bundle')
+    run("mkdir -p #{shared_dir} && ln -s #{shared_dir} #{release_dir}")
+  end
+
+  task :bundle_new_release, :roles => :app do
+    bundler.create_symlink
+    run "cd #{release_path} && bundle install --deployment"
+  end
+end
+after 'deploy:update_code', 'bundler:bundle_new_release'
