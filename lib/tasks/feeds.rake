@@ -16,8 +16,11 @@ namespace :feeds do
             comic.save
           end
         end #xml
-      rescue
-        puts "Error: #{$!} {$.}"
+      rescue => e
+        $stderr.puts "Fetching comic (#{File.basename(f)}):"
+        $stderr.puts "#{e.class}: #{e}"
+        $stderr.puts "#{e.backtrace.join("\n")}"
+        $stderr.puts
       end
     end
   end

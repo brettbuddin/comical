@@ -1,8 +1,9 @@
 class CtrlAltDel < Comic
   site_name "Ctrl Alt Del"
   site_url "http://cad-comic.com/cad"
-  feed_url "http://www.cad-comic.com/rss/rss.xml"
-  
+  feed_url "http://cdn.cad-comic.com/rss.xml"
+  gzipped
+
   def map_routine(xml)
     items = xml.channel.items
     latest = items.each do |item|
@@ -17,7 +18,7 @@ class CtrlAltDel < Comic
 
       content = ''
       open(site_url) { |s| content = s.read }
-      img_url = content.match(/"(http:\/\/cdn.cad-comic.com\/comics\/.+\.jpg)"/)
+      img_url = content.match(/"(http:\/\/(.+).cdn.cad-comic.com\/comics\/.+\.png)"/)
       self.image_url = img_url[1]
     end
   end

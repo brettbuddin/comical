@@ -11,7 +11,13 @@ class Comic < ActiveRecord::Base
 
   def fetch
     content = ''
-    open(self.feed_url) { |s| content = s.read }
+    open(feed_url) do |s| 
+      if gzipped
+        content = Zlib::GzipReader.new(s).read
+      else
+        content = s.read
+      end
+    end
     RSS::Parser.parse(content, false)
   end
 
@@ -24,6 +30,21 @@ class Comic < ActiveRecord::Base
     self
   end
 
+  def inflate(string)
+    stream = Zlib::Inflate.new(-15)
+    buffer = stream.inflate(string)
+    stream.finish
+    stream.close
+    buffer
+  end
+
+  def gzipped
+    false
+  end
+  
+  # Allow sub-classes of this class to define
+  # some instance methods via a tiny DSL to describe
+  # the feed and comic information
   class << self
     def site_name(name)
       define_method :site_name, lambda { name }
@@ -36,6 +57,10 @@ class Comic < ActiveRecord::Base
 
     def feed_url(url)
       define_method :feed_url, lambda { URI.parse(url) }
+    end
+
+    def gzipped
+      define_method :gzipped, lambda { true }
     end
   end
 end
