@@ -17,19 +17,19 @@ class ComicsController < ApplicationController
   end
 
   def all
-    @comics = Comic.select('distinct(type),max(posted_on) as posted_on,*').group(:type).all
+    @comics = Comic.select('distinct(type)').group(:type).all
   end
 
   private
 
   def comic_class(slug)
-    @comic_list ||= comic_list
+    comics = comic_list
     
-    @comic_list[@comic_list.index(slug)].camelize.constantize
+    comics[comics.index(slug)].camelize.constantize
   end
 
   def comic_list
-    Dir.glob(File.join(File.dirname(__FILE__), '../../app/models/comics/*.rb')).collect do |f|
+    @comic_list ||= Dir.glob(File.join(File.dirname(__FILE__), '../../app/models/comics/*.rb')).collect do |f|
       File.basename(f).to(-4)
     end
   end
