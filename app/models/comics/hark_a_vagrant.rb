@@ -9,7 +9,7 @@ class HarkAVagrant < Comic
     if latest
       self.description = latest.title.match(/Hark, a Vagrant: (.*)/)[1].to_s
       self.posted_on = Date.parse(latest.pubDate.to_s)
-      self.image_url = latest.description.match(/http:\/\/www\.harkavagrant\.com\/[^\/]+\/[^\/]+.png/).to_s
+      self.image_url = latest.description.match(/http:\/\/www\.harkavagrant\.com\/[^\/]+\/[^\/]+.(png|jpg)/).to_s
       self.permalink = latest.link
     end
   end
