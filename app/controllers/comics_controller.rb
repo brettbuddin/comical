@@ -17,7 +17,7 @@ class ComicsController < ApplicationController
   end
 
   def all
-    @comics = Comic.select('distinct(type)').group(:type).all
+    @comics = Comic.select('distinct(type), *').group(:type).all
   end
 
   private
