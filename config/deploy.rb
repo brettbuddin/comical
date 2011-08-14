@@ -1,4 +1,11 @@
-default_environment['PATH'] = "/opt/ruby-enterprise-1.8.7-2010.02/bin:/usr/local/bin:$PATH"
+set :default_environment, {
+  'PATH' => "/home/brett/.rvm/rubies/ruby-1.9.2-p290/bin:/home/brett/.rvm/gems/ruby-1.9.2-p290/bin:$PATH",
+  'RUBY_VERSION' => 'ruby 1.9.2',
+  'GEM_HOME'     => '/home/brett/.rvm/gems/ruby-1.9.2-p290/',
+  'GEM_PATH'     => '/home/brett/.rvm/gems/ruby-1.9.2-p290/',
+  'BUNDLE_PATH'  => '/home/brett/.rvm/gems/ruby-1.9.2-p290/'
+}
+
 
 set :application, 'comical'
 set :repository, 'git@github.com:brettbuddin/comical.git'
