@@ -1,4 +1,4 @@
-Comics::Application.routes.draw do |map|
+Comics::Application.routes.draw do
   root :to => "comics#index"
   resources :comics
 

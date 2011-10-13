@@ -9,7 +9,7 @@ class PicturesForSadChildren < Comic
     if latest
       self.description = latest.title
       self.posted_on = Date.parse(latest.pubDate.to_s)
-      self.image_url = latest.description.match(/http:\/\/www\.picturesforsadchildren\.com\/comics\/[0-9]+\.png/).to_s
+      self.image_url = latest.description.match(/http:\/\/www\.picturesforsadchildren\.com\/comics\/[0-9]+\.(png|jpg|gif)/).to_s
       self.permalink = latest.link
     end
   end

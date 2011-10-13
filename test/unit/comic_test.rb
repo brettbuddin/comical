@@ -2,8 +2,6 @@ require 'test_helper'
 
 class ComicTest < ActiveSupport::TestCase
   context "A Comic instance" do
-    should_validate_presence_of :posted_on, :image_url, :permalink
-
     should "define DSL for setting site name" do
       assert subject.class.respond_to?(:site_name)
     end

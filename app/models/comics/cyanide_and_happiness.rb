@@ -16,7 +16,7 @@ class CyanideAndHappiness < Comic
 
       content = ''
       open(self.permalink) { |s| content = s.read }
-      img_url = content.match(/http:\/\/www\.explosm\.net\/db\/files\/Comics\/[^\/]+\/[^\/]+\.png/)
+      img_url = content.match(/http:\/\/www\.explosm\.net\/db\/files\/[^\/]+\.png/)
       self.image_url = img_url[0]
     end
   end
